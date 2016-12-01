@@ -1,8 +1,15 @@
+/*
+  Theme Name: Oxygen
+  Theme Uri: http://www.themeum.com
+  Author: Themeum
+  Author Uri: http://www.themeum.com
+  Description: Onepage Site Template
+  Version: 1.0
+*/
 
-::selection {
-  background: rgba(0,0,0,0.2);
-  color: #2980b9;
-}
+/*************************
+*******Typography******
+**************************/
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -105,10 +112,6 @@ section {
   background: #fff;
 }
 
-.preloader img {
-  top: 300px;
-}
-
 .preloader > i {
   position: absolute;
   font-size: 36px;
@@ -122,6 +125,10 @@ section {
   display: inline-block;
 }
 
+
+/*************************
+********Home CSS**********
+**************************/
 #home-slider {
   overflow: hidden;
   position: relative;
@@ -253,27 +260,6 @@ section {
   animation: bounce 3000ms infinite;
 }
 
-#finallogo {
-  width: 80px;
-  height: 50px;
-}
-
-#finallogo-footer {
-  width: 110px;
-  height: 80px;
-}
-
-#scroll-links {
-  webkit-tranisition: all .4s ease;
-  transition: all .4s ease;  
-}
-
-#scroll-links:hover {
-  background: rgba(0,0,0,0.1);
-  webkit-tranisition: all .4s ease;
-  transition: all .4s ease;
-}
-
 .navbar-right li a {
   color: #fff;
   text-transform: uppercase;
@@ -291,8 +277,53 @@ section {
   margin-top: 5px;
 }
 
+/*************************
+********Service CSS*******
+**************************/
+
+.service-icon {
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  font-size: 36px;
+  height: 90px;
+  line-height: 90px;
+  width: 90px;  
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+.our-services .col-sm-4:hover .service-icon {
+  background-color: #333;
+}
+
+.our-services .col-sm-4 {
+  border-right:1px solid #f2f2f2;
+  border-bottom:1px solid #f2f2f2;
+  padding-bottom: 50px;
+}
+
+.our-services .col-sm-4:nth-child(4), 
+.our-services .col-sm-4:nth-child(5), 
+.our-services .col-sm-4:nth-child(6) {
+  border-bottom:0;
+  padding-top: 60px;
+}
+
+.our-services .col-sm-4:nth-child(3), 
+.our-services .col-sm-4:nth-child(6) {
+  border-right:0;
+}
+
+.service-info h3 {
+  margin-top: 35px;
+}
+
+/*************************
+********About CSS*******
+**************************/
 #about-us {
-  background-image: url("about-bg.jpg");
+  background-image: url(../images/about-bg.jpg);
   padding: 60px 0;
 }
 
@@ -309,6 +340,34 @@ section {
 #about-us h1 {
   margin-bottom: 30px;
 }
+
+.progress{
+  height: 20px;
+  background-color: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  margin-bottom: 25px;
+}
+
+.progress-bar{
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  text-align: right;
+  padding-right: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+.progress .progress-bar.six-sec-ease-in-out {
+  -webkit-transition: width 2s ease-in-out;
+  transition:  width 2s ease-in-out;
+}
+
+/*************************
+********portfolio CSS*****
+**************************/
 
 #portfolio .container-fluid, 
 #portfolio .col-sm-3  {
@@ -434,6 +493,9 @@ section {
   margin-left: -17px;
 }
 
+/*************************
+*********Team CSS*********
+**************************/
 #team {
   padding-top: 0;
 }
@@ -517,15 +579,16 @@ section {
 }
 
 
+/*************************
+*******Features CSS*******
+**************************/
 #features {
   text-align: center;
-  background-image: url("features-bg.png");
-  color: #fff;
+  background-image: url(../images/features-bg.jpg);
 }
 
 #features i {
   font-size: 48px;
-  color: #fff;
 }
 
 #features h3 {
@@ -540,15 +603,68 @@ section {
 }
 
 
-#twitter {
-  background-image: url("twitter-bg.jpg");
-  overflow: hidden;
+/*************************
+*****Pricing Table CSS****
+**************************/
+.pricing-table {
+  text-align: center;
+}
+
+.single-table {
+  padding: 30px 20px 20px;
+  border:1px solid #f2f2f2;
+}
+
+.single-table h3 {
+  margin-top: 0;
+  padding: 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.price {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.price span {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.single-table ul {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.single-table ul li {
+  line-height: 30px;
+}
+
+.single-table.featured {  
   color: #fff;
+}
+
+.single-table.featured h3 { 
+  color: #fff;
+}
+
+.single-table.featured .btn.btn-primary {
+  background-color: #fff;
+}
+
+/*************************
+********Twitter CSS*******
+**************************/
+#twitter {
+  background-image: url(../images/twitter-bg.jpg);
 }
 
 #twitter > div {
   text-align: center;
-  overflow: hidden;
+  position: relative;
 }
 
 #twitter-carousel {
@@ -562,16 +678,23 @@ section {
   color: #fff;
 }
 
-.twitter-icon .fa-comments {
-  font-size: 35px;
-  background: #2980b9;
-  height: 70px;
-  width: 70px;
+.twitter-icon .fa-twitter {
+  font-size: 24px;
+  height: 64px;
+  width: 64px;
   line-height: 65px;
   border-radius: 50%; 
   position: relative;
 }
 
+.twitter-icon .fa-twitter:after {
+  position: absolute;
+  content: "";
+  border-width: 8px;
+  border-style: solid;
+  left: 24px;
+  bottom: -14px;
+}
 
 #twitter-carousel .item {
   padding: 0 55px;
@@ -615,19 +738,130 @@ section {
   color: #fff;
 }
 
+
+/*************************
+**********Blog CSS********
+**************************/
+
+.post-thumb {
+  position: relative;
+}
+
+.post-icon {
+  position: absolute;
+  top:10px;
+  right:10px;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  border-radius:4px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+}
+
+.post-meta {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.post-meta span {
+  margin-right: 16px;
+}
+
+#post-carousel .carousel-indicators {
+  bottom: 3px;
+  left: 90%;
+}
+
+.blog-left-control, .blog-right-control {
+  position: absolute;
+  top: 45%;
+  width: 30px;
+  text-align: center;
+  color: rgba(255,255,255,.7);
+  font-size: 36px;
+}
+
+.blog-left-control {
+  left: 0;
+}
+
+.blog-right-control {
+  right: 0;
+}
+
+.blog-left-control:hover, .blog-right-control:hover {
+  color: #fff;  
+}
+
+.entry-header h3 a {
+  line-height: 30px;
+}
+
+.entry-header .date, 
+.entry-header .cetagory {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.entry-header .date:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom:-22px;
+  width: 20px;
+  height: 3px;
+}
+
+.entry-content {
+  font-size: 14px;
+}
+
+.load-more {
+  display:block;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.btn-loadmore {
+  border: 1px solid #f2f2f2;
+  color: #666666;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 125px;
+  text-transform: uppercase;
+}
+
+.btn-loadmore:hover {
+  color:#fff;
+}
+
+/*************************
+**********Contact CSS*****
+**************************/
+
 #contact {
   padding-top: 45px;
   padding-bottom: 0;
 }
 
 #google-map {
-  height: 250px;
+  height: 350px;
 }
 
 #contact-us {
-  background-image:url("school-bg.jpg");
+  background-image:url(../images/contact-bg.jpg);
   padding-bottom: 90px; 
-  overflow: hidden;
 }
 
 #contact-us .heading {
@@ -644,7 +878,7 @@ section {
 
 textarea.form-control {
   min-height: 180px;
-  resize: none;
+  resize:none;
 }
 
 .form-group {
@@ -686,8 +920,7 @@ ul.address {
 
 .footer-top {
   position: relative;
-  padding:30px;
-  background: #444;
+  padding:30px 0
 }
 
 #footer .footer-bottom {
@@ -715,17 +948,17 @@ ul.address {
 }
 
 #footer .social-icons ul li a {
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,.2);
   border-radius: 4px;
   line-height: 33px;
 }
 
 #footer .social-icons ul li a:hover {
-  color: #fff;
+  color: #fff
 }
 
 #footer .social-icons ul li a.envelope:hover {
-  background-color: #c0392b;
+  background-color: #CECB26;
 }
 
 #footer .social-icons ul li a.facebook:hover {
@@ -744,5 +977,6 @@ ul.address {
   background-color: #ff6b00;
 }
 
+/*Presets*/
 
 
